@@ -1,0 +1,42 @@
+<!DOCTYPE >
+<html>
+  <link rel="stylesheet" href="./main.css" />
+  <head> </head>
+  <body>
+    <div id="error" style="visibility: hidden;"><h1>Select all fields</h1></div>
+    <div id="gamepanel">
+      <h1>Welcome to 2048 Game Panel</h1>
+      <div>
+        <h2>Mode</h2>
+        <input type="radio" id="console" name="mode" value="console" />Console <input type="radio" id="ui" name="mode" value="ui" />Graphical UI
+      </div>
+      <div>
+        <h2>Matrix</h2>
+        <input type="radio" id="small" name="matrix" value="4" />4X4 <input type="radio" id="big" name="matrix" value="8" />8X8
+      </div>
+      <div>
+        <h2>Score</h2>
+        <input type="radio" id="two" name="score" value="2048" />2048 <input type="radio" id="four" name="score" value="4096" />4096
+      </div>
+      <br />
+      <div><button type="submit" onclick="selectGame()">Start</button></div>
+    </div>
+    <div id="gameCanvas" style="visibility: hidden;">
+      <h1>Welcome to 2048 Game</h1>
+      <h2 id="score"></h2>
+      <canvas id="myCanvas"></canvas>
+    </div>
+    <div id="consolePanel" style="visibility: hidden;">
+      <h1>Press F12 for console</h1>
+      <span>Type 1, 2, 3, 4 to indicate left, right, up, down</span><br />
+      <input type="text" id="keyId" maxLength="1" />
+    </div>
+  </body>
+  <script type="module" src="viewManager.js"></script>
+  <script type="module" src="userInputManager.js"></script>
+  <script type="module" src="consoleManager.js"></script>
+  <script type="module" src="utilManager.js"></script>
+  <script type="module" src="gridManager.js"></script>
+  <script type="module" src="gameManager.js"></script>
+  <script type="module" src="application.js"></script>
+</html>
