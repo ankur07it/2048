@@ -141,4 +141,3 @@ GameManager.prototype.isGameOver = function() {
   }
   return true;
 };
-
